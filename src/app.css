@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+  --color-bg-base: #F8F8F5;       /* Теплый светлый фон */
+  --color-text-main: #1B1B1B;     /* Основной текст */
+  --color-text-muted: #6B7280;    /* Вторичный текст */
+  --color-border-line: #E5E5E2;   /* Тонкие разделители */
+  
+  --color-accent-primary: #84D1B2; /* Мятный (индикаторы, hover) */
+  --color-accent-secondary: #BE8073; /* Терракотовый (заказчики, теги) */
+  --color-accent-warn: #EEC50B;    /* Желтый (стрелки, микро-детали) */
+}
+
+body {
+  background-color: var(--color-bg-base);
+  color: var(--color-text-main);
+  font-family: 'Geist Sans', 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+
+/* Убираем стандартные выделения кнопок */
+button {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background-color: var(--color-accent-primary);
+  color: #1B1B1B;
+}
